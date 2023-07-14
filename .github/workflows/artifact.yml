@@ -24,3 +24,5 @@ jobs:
           name: python-version-artifact
           path: ./.github/workflows/version.txt
 
+      - name: Save versions to file
+        run: echo "${{ steps.python-version.outputs.stdout }}" > ./.github/workflows/version.txt
