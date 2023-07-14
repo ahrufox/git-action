@@ -18,10 +18,12 @@ jobs:
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
 
-      - name: Save artifact
-        uses: actions/upload-artifact@v2
+      - name: echo txt
         run: |
           echo " " > version.txt
+
+      - name: Save artifact
+        uses: actions/upload-artifact@v2
         with:
           name: python-version-artifact
           path: version.txt
