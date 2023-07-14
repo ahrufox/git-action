@@ -20,6 +20,8 @@ jobs:
 
       - name: Save artifact
         uses: actions/upload-artifact@v2
+        run: |
+          echo " " > version.txt
         with:
           name: python-version-artifact
           path: version.txt
