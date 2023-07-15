@@ -19,10 +19,7 @@ jobs:
         run: python -c "import sys; print(sys.version)"
 
       - name: Save artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: python-version-artifact
           path: ./.github/workflows/version.txt
-
-      - name: Save versions to file
-        run: echo "${{ steps.python-version.outputs.stdout }}" > ./.github/workflows/version.txt
